@@ -6,4 +6,4 @@ build
 
 
 # Ignore vim files
-.swp
+*.swp
