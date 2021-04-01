@@ -3,6 +3,9 @@
  */
 package JsonObjectParser;
 
+import io.vertx.core.Vertx;
+import io.vertx.core.DeploymentOptions;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
@@ -10,5 +13,9 @@ public class App {
 
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
+
+				Vertx vertx = Vertx.vertx();
+
+				vertx.deployVerticle(TCPServerVerticle.class, new DeploymentOptions());
     }
 }
